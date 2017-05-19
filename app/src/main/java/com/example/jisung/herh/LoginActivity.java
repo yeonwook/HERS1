@@ -32,15 +32,20 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onClick(View v){
         if(v.getId() ==R.id.chose_user){
+            userBtn.setBackgroundResource(R.color.loginBtnOn);
+            hostBtn.setBackgroundResource(R.color.loginButton);
             userScreen.setVisibility(View.VISIBLE);
             hostScreen.setVisibility(View.INVISIBLE);
         }//화면 변경
         else if(v.getId() == R.id.chose_host){
+            hostBtn.setBackgroundResource(R.color.loginBtnOn);
+            userBtn.setBackgroundResource(R.color.loginButton);
             userScreen.setVisibility(View.INVISIBLE);
             hostScreen.setVisibility(View.VISIBLE);
 
         }//화면 변경
         else if(v.getId() == R.id.login){
+
             intent=new Intent(this,MainActivity.class);
             startActivity(intent);
         }
