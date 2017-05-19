@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    void init(){
+    void init(){//초기화
         userBtn = (Button)findViewById(R.id.chose_user);
         hostBtn = (Button)findViewById(R.id.chose_host);
         checkBtn = (Button)findViewById(R.id.check);
