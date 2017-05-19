@@ -10,4 +10,5 @@ public class ResCheckActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_res_check);
     }
+    //sdkjfhskjdfh
 }
