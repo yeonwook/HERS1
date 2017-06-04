@@ -3,8 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="background">#f9ecbd</color>
-    <color name="loginButton">#ecc431</color>
+    <color name="background">#ffd7cb</color>
+    <color name="loginButton">#ffb098</color>
     <color name="loginInput">#ff1a00</color>
-    <color name="loginBtnOn">#f0d15f</color>
+    <color name="loginBtnOn">#ff8965</color>
+    <color name="text">#333333</color>
+    <color name="col1">#c0fae9e3</color>
 </resources>

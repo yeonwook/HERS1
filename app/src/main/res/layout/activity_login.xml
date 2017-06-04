@@ -69,6 +69,7 @@
                         android:background="@color/loginButton"
                         android:onClick="onClick"
                         android:id="@+id/check"
+                        android:textColor="@color/text"
                         android:text="인증"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -92,7 +93,7 @@
                 <EditText
                     android:layout_marginRight="50dp"
                     android:id="@+id/code"
-                    android:hint="Code"
+                    android:hint="      Code"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -101,19 +102,19 @@
     </LinearLayout>
     <LinearLayout
         android:layout_weight="2"
-        android:layout_gravity="center"
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
         <Button
-            android:background="@color/loginButton"
+            android:background="@color/loginBtnOn"
             android:onClick="onClick"
             android:id="@+id/login"
             android:padding="20dp"
             android:text="시작하기"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"/>
     </LinearLayout>

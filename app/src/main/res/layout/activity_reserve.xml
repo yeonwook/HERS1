@@ -4,67 +4,157 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:orientation="vertical"
     android:weightSum="100"
     tools:context="com.example.jisung.herh.ReserveActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
-        android:text="예약하기" />
+        android:background="@color/loginButton"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/text"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="한신포차"
+            android:textSize="20dp"/>
+       <View
+           android:layout_weight="1"
+           android:layout_width="0dp"
+           android:layout_height="0dp"/>
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/text"
+            android:text="2017년\n6월 20일"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
 
     <TextView
+
+        android:gravity="center"
         android:layout_weight="5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="예약시간"/>
+        android:text="인원"
 
-    <Spinner
+        android:textColor="@color/text"
+        android:textSize="20dp"/>
+    <LinearLayout
+        android:background="@color/col1"
         android:layout_weight="20"
         android:layout_width="match_parent"
-        android:layout_height="0dp"></Spinner>
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <EditText
+            android:inputType="number"
+            android:textSize="30dp"
+            android:textColor="@color/text"
+            android:id="@+id/peoplepick"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="20"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:textColor="@color/text"
+
+            android:layout_weight="30"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="명"
+            android:textSize="20dp"
+            android:gravity="center"/>
+        <NumberPicker
+            android:id="@+id/error"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="20"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"></NumberPicker>
+        <TextView
+            android:textColor="@color/text"
+            android:layout_weight="30"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="오차인원"
+            android:textSize="20dp"
+            android:gravity="center"/></LinearLayout>
 
     <TextView
+        android:textColor="@color/text"
+        android:layout_marginTop="10dp"
         android:layout_weight="5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="ㅇㅣㄴㅇㅜㅓㄴ"/>
+        android:text="예약시간"
+        android:gravity="center"
+        android:textSize="20dp"/>
 
-    <Spinner
+    <TimePicker
+        android:background="@color/col1"
+        android:id="@+id/time"
         android:layout_weight="20"
         android:layout_width="match_parent"
-        android:layout_height="0dp"></Spinner>
+        android:layout_height="0dp"
+        android:timePickerMode="spinner"></TimePicker>
 
     <TextView
+        android:textColor="@color/text"
+
+        android:gravity="center"
         android:layout_weight="8"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="ㅇㅣㄹㅡㅁ/ㅅㅗㅅㅗㄱ"/>
+        android:text="예약자 명"
+        android:textSize="20dp"/>
 
     <EditText
+        android:textColor="@color/text"
+        android:gravity="center"
+        android:id="@+id/name"
         android:layout_weight="8"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:hint="@string/app_name"/>
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:background="@color/col1"
+        android:hint="ex)학회 알파"/>
 
     <TextView
+        android:textColor="@color/text"
+        android:gravity="center"
         android:layout_weight="8"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="phonenum"/>
+        android:text="연락처"
+        android:textSize="20dp"/>
 
     <EditText
+        android:background="@color/col1"
+        android:gravity="center"
+        android:textColor="@color/text"
+        android:id="@+id/phoneNum"
         android:layout_weight="8"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:hint="ex)ㅎㅗㅇㄱㅣㄹㄷㅗㅇ"/>
+        android:inputType="number"
+        />
 
     <Button
+        android:background="@color/loginBtnOn"
+        android:onClick="onClick"
+        android:id="@+id/button"
         android:layout_weight="8"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_gravity="center"
-        android:layout_height="8dp" />
+        android:layout_height="8dp"
+        android:text="예약"
+        />
 
 </LinearLayout>
