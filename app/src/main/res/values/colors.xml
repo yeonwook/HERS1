@@ -8,5 +8,6 @@
     <color name="loginInput">#ff1a00</color>
     <color name="loginBtnOn">#ff8965</color>
     <color name="text">#333333</color>
+    <color name="colW">#fff</color>
     <color name="col1">#c0fae9e3</color>
 </resources>
