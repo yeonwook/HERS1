@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
             if(route==0)
                 intent=new Intent(this,MainActivity.class);
             else
-                intent = new Intent(this,User_ResActivity.class);
+                intent = new Intent(this,ResCheckActivity.class);
             startActivity(intent);
         }
 
