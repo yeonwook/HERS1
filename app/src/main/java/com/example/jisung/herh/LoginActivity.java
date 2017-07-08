@@ -21,23 +21,26 @@ public class LoginActivity extends AppCompatActivity {
     LinearLayout userScreen; // 사용자 화면
     LinearLayout hostScreen; // 사업자 화면
     Intent intent;
-
+    int route =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         init();
 
     }
 
     public void onClick(View v){
         if(v.getId() ==R.id.chose_user){
+            route =0;
             userBtn.setBackgroundResource(R.color.loginBtnOn);
             hostBtn.setBackgroundResource(R.color.loginButton);
             userScreen.setVisibility(View.VISIBLE);
             hostScreen.setVisibility(View.INVISIBLE);
         }//화면 변경
         else if(v.getId() == R.id.chose_host){
+            route = 1;
             hostBtn.setBackgroundResource(R.color.loginBtnOn);
             userBtn.setBackgroundResource(R.color.loginButton);
             userScreen.setVisibility(View.INVISIBLE);
@@ -45,8 +48,10 @@ public class LoginActivity extends AppCompatActivity {
 
         }//화면 변경
         else if(v.getId() == R.id.login){
-
-            intent=new Intent(this,MainActivity.class);
+            if(route==0)
+                intent=new Intent(this,MainActivity.class);
+            else
+                intent = new Intent(this,User_ResActivity.class);
             startActivity(intent);
         }
 
