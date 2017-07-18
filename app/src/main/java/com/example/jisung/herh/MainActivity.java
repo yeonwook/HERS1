@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent =new Intent(MainActivity.this,User_ResActivity.class);
+                intent.putExtra("store",stores.get(position).getStore_name());
                 startActivity(intent);
             }
         });

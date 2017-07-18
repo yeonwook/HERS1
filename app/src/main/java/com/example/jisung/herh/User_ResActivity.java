@@ -38,6 +38,8 @@ public class User_ResActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_res);
         alist = new ArrayList<Menu>();
+        Intent getintent = getIntent();
+        final String store = getintent.getStringExtra("store");
 
         CalendarView calendar = (CalendarView) findViewById(R.id.calendarView3);
         calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -49,12 +51,15 @@ public class User_ResActivity extends AppCompatActivity {
                 dialog.setView(r_view);
                 listView = (ListView) r_view.findViewById(R.id.list_item);
                 TextView s_date = (TextView)r_view.findViewById(R.id.textView2);
-                s_date.setText(year + " . " + (month+1) + " . " + dayOfMonth);
+                final String dateText =year + " . " + (month + 1) + " . " + dayOfMonth;
+                s_date.setText(dateText);
                 Button button = (Button)r_view.findViewById(R.id.button);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent =new Intent(User_ResActivity.this,ReserveActivity.class);
+                        intent.putExtra("date",dateText);
+                        intent.putExtra("store",store);
                         startActivity(intent);
                     }
                 });
